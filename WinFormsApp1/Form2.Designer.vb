@@ -44,12 +44,13 @@ Partial Class Form2
         txtSerial = New TextBox()
         lblSerial = New Label()
         DataGridView1 = New DataGridView()
-        TextBox1 = New TextBox()
+        txtSearch = New TextBox()
         btnSearch = New Button()
         btnAdd = New Button()
         btnEdit = New Button()
         btnClear = New Button()
         btnRefresh = New Button()
+        btnDelete = New Button()
         GroupBox1.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -265,12 +266,12 @@ Partial Class Form2
         DataGridView1.Size = New Size(1366, 268)
         DataGridView1.TabIndex = 1
         ' 
-        ' TextBox1
+        ' txtSearch
         ' 
-        TextBox1.Location = New Point(12, 415)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(333, 27)
-        TextBox1.TabIndex = 9
+        txtSearch.Location = New Point(12, 415)
+        txtSearch.Name = "txtSearch"
+        txtSearch.Size = New Size(333, 27)
+        txtSearch.TabIndex = 9
         ' 
         ' btnSearch
         ' 
@@ -301,7 +302,7 @@ Partial Class Form2
         ' 
         ' btnClear
         ' 
-        btnClear.Location = New Point(782, 413)
+        btnClear.Location = New Point(890, 413)
         btnClear.Name = "btnClear"
         btnClear.Size = New Size(94, 29)
         btnClear.TabIndex = 13
@@ -310,12 +311,21 @@ Partial Class Form2
         ' 
         ' btnRefresh
         ' 
-        btnRefresh.Location = New Point(909, 413)
+        btnRefresh.Location = New Point(1004, 413)
         btnRefresh.Name = "btnRefresh"
         btnRefresh.Size = New Size(94, 29)
         btnRefresh.TabIndex = 14
         btnRefresh.Text = "Refresh"
         btnRefresh.UseVisualStyleBackColor = True
+        ' 
+        ' btnDelete
+        ' 
+        btnDelete.Location = New Point(770, 415)
+        btnDelete.Name = "btnDelete"
+        btnDelete.Size = New Size(94, 29)
+        btnDelete.TabIndex = 15
+        btnDelete.Text = "Delete"
+        btnDelete.UseVisualStyleBackColor = True
         ' 
         ' Form2
         ' 
@@ -323,12 +333,13 @@ Partial Class Form2
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
         ClientSize = New Size(1380, 763)
+        Controls.Add(btnDelete)
         Controls.Add(btnRefresh)
         Controls.Add(btnClear)
         Controls.Add(btnEdit)
         Controls.Add(btnAdd)
         Controls.Add(btnSearch)
-        Controls.Add(TextBox1)
+        Controls.Add(txtSearch)
         Controls.Add(DataGridView1)
         Controls.Add(GroupBox1)
         Font = New Font("Arial Narrow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -344,7 +355,6 @@ Partial Class Form2
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents lblSerial As Label
     Friend WithEvents txtSerial As TextBox
-    Friend WithEvents txtBrand As TextBox
     Friend WithEvents txtGeneric As TextBox
     Friend WithEvents lblGeneric As Label
     Friend WithEvents txtImported As TextBox
@@ -355,7 +365,6 @@ Partial Class Form2
     Friend WithEvents lblBatch As Label
     Friend WithEvents lblQty As Label
     Friend WithEvents lblImported As Label
-    Friend WithEvents lblBrand As Label
     Friend WithEvents lblExpire As Label
     Friend WithEvents lblRemark As Label
     Friend WithEvents lblManufacture As Label
@@ -364,10 +373,13 @@ Partial Class Form2
     Friend WithEvents manuDate As DateTimePicker
     Friend WithEvents expireDate As DateTimePicker
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtSearch As TextBox
     Friend WithEvents btnSearch As Button
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnEdit As Button
     Friend WithEvents btnClear As Button
     Friend WithEvents btnRefresh As Button
+    Friend WithEvents lblBrand As Label
+    Friend WithEvents txtBrand As TextBox
+    Friend WithEvents btnDelete As Button
 End Class
